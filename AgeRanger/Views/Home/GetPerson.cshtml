@@ -1,0 +1,20 @@
+﻿@model List<AgeRanger.Models.Person>
+
+<div>
+    <h4>Person</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @foreach (var item in Model)
+        {
+            <p>@item.Id</p>
+            <p>@item.FirstName</p>
+            <p>@item.LastName</p>
+            <p>@item.Age</p>
+            <p>@item.Description</p>
+        }
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
